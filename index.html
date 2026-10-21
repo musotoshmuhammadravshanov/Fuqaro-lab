@@ -49,6 +49,25 @@
 @media(max-width:760px){.pres-slide,.pres-slide.active{grid-template-columns:1fr}.pres-stage{min-height:0}.pres-slide{min-height:0}.pres-visual{min-height:190px;order:-1}.pres-visual svg{max-height:210px}.pres-slide h3{font-size:30px}.presentation-toolbar{align-items:flex-start}.pres-controls{width:100%}.pres-btn{flex:1}.pres-fullscreen{inset:0!important;border-radius:0!important}.pres-fullscreen .pres-stage{min-height:calc(100vh - 165px)}}
 @media(prefers-reduced-motion:reduce){.pres-slide{animation:none}}
 
+
+/* FUQARO.LAB — loyiha jamoasi */
+.team-section{background:linear-gradient(180deg,#edf3f8 0%,#f5f8fc 100%)}
+.team-section .sectionhead{text-align:center;margin-left:auto;margin-right:auto}
+.team-lead{max-width:760px;margin:0 auto 28px;padding:25px 28px;border:1px solid #f7c96b80;border-radius:22px;background:linear-gradient(125deg,#07182d,#0e4555);color:#fff;box-shadow:0 18px 45px #102d4b18;text-align:center}
+.team-lead .team-crown{font-size:27px;display:block;margin-bottom:5px}
+.team-lead .team-role{display:block;color:#a9eee4;font-size:11px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+.team-lead h3{font-size:clamp(22px,3vw,30px);margin:5px 0 0;color:#f7c96b}
+.team-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.team-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 12px 32px #102d4b08;transition:transform .25s,box-shadow .25s,border-color .25s}
+.team-card:hover{transform:translateY(-5px);box-shadow:0 18px 38px #102d4b14;border-color:#9ce6dd}
+.team-card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--gold))}
+.team-number{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#e0f8f4;color:#087b72;font-weight:900;font-size:13px}
+.team-card h3{font-size:19px;color:var(--navy);margin:15px 0 8px}
+.team-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.team-bottom{text-align:center;margin:30px 0 0;padding:14px 20px;border:1px solid #19c6b255;border-radius:15px;background:#e8faf6;color:#075d55;font-weight:900;letter-spacing:.5px}
+@media(max-width:850px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.team-grid{grid-template-columns:1fr}.team-card{padding:21px}.team-lead{padding:22px 18px}}
+
 </style>
 </head>
 <body>
@@ -225,8 +244,33 @@
  </div>
 </div></section>
 <section class="closing"><div class="container reveal"><div class="eyebrow"><span class="dot"></span> Bizning xulosamiz</div><h2>Kuchli davlatning poydevori — <span>mas’uliyatli inson.</span></h2><p>Hurmatni boshqalardan kutishdan oldin, uni o‘zimiz ko‘rsataylik. Bugun sinfda boshlangan kichik odat ertangi jamiyat madaniyatiga hissa qo‘shadi.</p><a class="btn primary" href="#test">Bilimingni tekshir ↗</a><button class="btn secondary" onclick="window.print()">⎙ Sahifani chop etish</button></div></section>
+
+<section id="tayyorladi" class="team-section">
+ <div class="container">
+  <div class="sectionhead reveal">
+   <div class="kicker">09 / Loyiha jamoasi</div>
+   <h2>TAYYORLADI</h2>
+   <p>FUQARO.LAB loyihasi — g‘oya, izlanish va hamkorlik natijasi.</p>
+  </div>
+  <div class="team-lead reveal">
+   <span class="team-crown">✦</span>
+   <span class="team-role">Loyiha muallifi va yaratuvchisi</span>
+   <h3>Ravshanov M.</h3>
+  </div>
+  <div class="team-grid">
+   <article class="team-card reveal"><span class="team-number">01</span><h3>Ravshanov M.</h3><p>Loyiha g‘oyasi, saytni yaratish, dizayn va ishlarni muvofiqlashtirish.</p></article>
+   <article class="team-card reveal"><span class="team-number">02</span><h3>Isayeva K.</h3><p>Mavzu bo‘yicha ma’lumotlarni to‘plash va foydalanilgan manbalarni tekshirish.</p></article>
+   <article class="team-card reveal"><span class="team-number">03</span><h3>To‘lanboyev D.</h3><p>Amaliy yechimlar, hayotiy misollar va takliflarni tayyorlash.</p></article>
+   <article class="team-card reveal"><span class="team-number">04</span><h3>Ergashev E.</h3><p>Interaktiv test savollari va javoblarini tayyorlash.</p></article>
+   <article class="team-card reveal"><span class="team-number">05</span><h3>Yo‘lchiyev A.</h3><p>So‘rovnoma savollarini tayyorlash va haqiqiy natijalarni umumlashtirish.</p></article>
+   <article class="team-card reveal"><span class="team-number">06</span><h3>Tohirova P.</h3><p>Matnlarni tahrirlash, imlo va yakuniy xulosani tekshirish.</p></article>
+  </div>
+  <div class="team-bottom reveal">✦ &nbsp; SINF: 8-D &nbsp; ✦</div>
+ </div>
+</section>
+
 </main>
-<footer class="footer"><div class="container footerin"><span>© 2026 · FUQARO.LAB — o‘quv loyihasi</span><span>8-sinf · Tarbiya va Davlat va huquq asoslari</span><span>Jamoa a’zolari: <b>[ismlarni kiriting]</b></span></div></footer>
+<footer class="footer"><div class="container footerin"><span>© 2026 · FUQARO.LAB — o‘quv loyihasi</span><span>8-sinf · Tarbiya va Davlat va huquq asoslari</span><span>Jamoa: <b>Ravshanov M. va 8-D sinf jamoasi</b></span></div></footer>
 <button class="backtop" id="backtop" aria-label="Yuqoriga qaytish" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
 const questions=[
