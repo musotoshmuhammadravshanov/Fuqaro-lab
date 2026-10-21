@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07182d">
+<title>Mas’uliyatli fuqaro — Interaktiv loyiha</title>
+<style>
+:root{--navy:#07182d;--navy2:#0b2440;--ink:#14243a;--muted:#66768a;--teal:#19c6b2;--gold:#f7c96b;--paper:#f5f8fc;--white:#fff;--line:#dfe7f0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.container{width:min(1160px,92%);margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(7,24,45,.93);backdrop-filter:blur(16px);border-bottom:1px solid #ffffff20;color:white}.navin{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:72px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;letter-spacing:.2px}.brandmark{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,var(--teal),#79f0df);color:#062137;font-size:21px}.navlinks{display:flex;gap:24px;align-items:center;font-size:13px;color:#cbd7e5}.navlinks a:hover{color:var(--gold)}.navcta,.btn{border:0;border-radius:999px;padding:12px 19px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}.navcta,.btn.primary{background:var(--teal);color:#052138}.btn:hover,.navcta:hover{transform:translateY(-2px);filter:brightness(1.06)}.btn.secondary{border:1px solid #ffffff55;color:white;background:#ffffff0c}.hero{background:radial-gradient(circle at 75% 20%,#1c6c78 0,transparent 28%),radial-gradient(circle at 10% 90%,#173b68 0,transparent 34%),linear-gradient(125deg,#07182d,#0a2544 65%,#102d4b);color:white;overflow:hidden;position:relative}.hero:after{content:"";position:absolute;inset:0;opacity:.12;background-image:radial-gradient(#9dece5 1px,transparent 1px);background-size:22px 22px;pointer-events:none}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:36px;padding:80px 0 86px}.eyebrow{display:inline-flex;gap:9px;align-items:center;border:1px solid #ffffff30;background:#ffffff0b;padding:7px 12px;border-radius:99px;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:#baf7ee;font-weight:800}.dot{width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 5px #19c6b222}.hero h1{font-size:clamp(38px,5.2vw,68px);line-height:1.04;letter-spacing:-2.4px;margin:23px 0 18px;max-width:720px}.hero h1 span{color:var(--gold)}.hero p{font-size:17px;color:#c7d6e6;max-width:590px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.hero-note{display:flex;align-items:center;gap:12px;margin-top:28px;color:#aabbd0;font-size:12px}.avatars{display:flex}.avatars span{width:31px;height:31px;margin-right:-7px;border:2px solid var(--navy);border-radius:50%;display:grid;place-items:center;background:#e4f6f4;color:#0b3944;font-size:14px}.hero-art{position:relative;min-height:410px;display:grid;place-items:center}.orbit{position:absolute;border:1px solid #7be8dc45;border-radius:50%;width:390px;height:390px;animation:spin 32s linear infinite}.orbit.two{width:310px;height:310px;animation-direction:reverse;border-style:dashed}.orbit:before,.orbit:after{content:"";position:absolute;width:12px;height:12px;border-radius:50%;background:var(--gold);box-shadow:0 0 22px #f7c96b80}.orbit:before{top:48px;left:65px}.orbit:after{bottom:48px;right:43px;background:var(--teal)}@keyframes spin{to{transform:rotate(360deg)}}.hero-svg{position:relative;z-index:2;width:min(100%,440px);filter:drop-shadow(0 25px 45px #0005)}.float-tag{position:absolute;z-index:3;background:#fff;color:#12263d;border-radius:14px;padding:12px 15px;box-shadow:0 15px 35px #0003;font-weight:800;font-size:12px;animation:float 4s ease-in-out infinite}.float-tag small{display:block;color:#718198;font-weight:600}.tag-one{top:42px;right:0}.tag-two{bottom:48px;left:0;animation-delay:-2s}@keyframes float{50%{transform:translateY(-10px)}}.stats{margin-top:-28px;position:relative;z-index:4}.statgrid{display:grid;grid-template-columns:repeat(4,1fr);background:white;border:1px solid var(--line);border-radius:20px;box-shadow:0 20px 55px #102d4b0d;overflow:hidden}.stat{padding:24px 26px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;font-size:27px;line-height:1.2;color:var(--navy)}.stat span{font-size:12px;color:var(--muted)}section{padding:88px 0}.sectionhead{max-width:700px;margin-bottom:35px}.kicker{font-size:12px;font-weight:900;letter-spacing:1.7px;color:#098f85;text-transform:uppercase}.sectionhead h2{font-size:clamp(29px,3.4vw,43px);line-height:1.13;letter-spacing:-1.1px;margin:10px 0 13px;color:var(--navy)}.sectionhead p{color:var(--muted);margin:0}.problemgrid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.problemcard{padding:30px;border-radius:22px;background:white;border:1px solid var(--line);position:relative;overflow:hidden}.problemcard.dark{background:var(--navy);color:white;border-color:var(--navy)}.problemcard h3{font-size:22px;margin:10px 0}.problemcard p{color:var(--muted);margin:0}.problemcard.dark p{color:#c1d0df}.iconbubble{width:48px;height:48px;display:grid;place-items:center;background:#e0f8f4;border-radius:15px;font-size:23px}.dark .iconbubble{background:#163e54}.quote{font-size:27px;line-height:1.3;font-weight:800;letter-spacing:-.5px;margin:18px 0}.quote em{font-style:normal;color:var(--gold)}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.chip{font-size:12px;border:1px solid var(--line);padding:7px 11px;border-radius:99px;color:#53657a;background:#fff}.dark .chip{border-color:#ffffff25;background:#ffffff09;color:#d8e7f5}.virtues{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.virtue{background:white;border:1px solid var(--line);border-radius:18px;padding:22px 18px;transition:.25s}.virtue:hover{transform:translateY(-5px);box-shadow:0 15px 35px #102d4b12}.virtue .num{font-size:12px;font-weight:900;color:#0a9b90}.virtue .emoji{font-size:27px;margin:13px 0}.virtue h3{font-size:16px;margin:0 0 7px}.virtue p{font-size:13px;color:var(--muted);margin:0}.chain{background:var(--navy);color:white;position:relative;overflow:hidden}.chain .sectionhead h2{color:white}.chain .sectionhead p{color:#b9c9d9}.chainrow{display:grid;grid-template-columns:1fr 48px 1fr 48px 1fr;align-items:center;gap:12px}.chaincard{min-height:220px;padding:25px;border:1px solid #ffffff20;border-radius:22px;background:linear-gradient(145deg,#ffffff0e,#ffffff04);position:relative}.chaincard .big{font-size:42px}.chaincard h3{margin:8px 0;font-size:22px}.chaincard p{font-size:13px;color:#b7c8d8}.arrow{font-size:29px;color:var(--teal);text-align:center}.chainfoot{margin-top:22px;border-left:3px solid var(--gold);padding:12px 17px;background:#ffffff08;color:#d8e5f1;border-radius:0 12px 12px 0}.solutions{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.solution{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden}.solutiontop{height:150px;display:grid;place-items:center;position:relative;background:linear-gradient(135deg,#e3f7f5,#dce8f8)}.solutiontop svg{width:150px;height:135px}.solution:nth-child(2) .solutiontop{background:linear-gradient(135deg,#fff1ce,#e6f1ff)}.solution:nth-child(3) .solutiontop{background:linear-gradient(135deg,#e4e9ff,#d6f7ee)}.solutionbody{padding:23px}.solutionbody .label{font-size:11px;letter-spacing:1px;font-weight:900;color:#0c998d;text-transform:uppercase}.solutionbody h3{font-size:20px;margin:8px 0}.solutionbody p{font-size:13px;color:var(--muted)}.solutionbody ul{padding-left:19px;font-size:13px;color:#475b70}.survey{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:start}.surveyintro{background:linear-gradient(150deg,#0b2948,#07182d);color:white;border-radius:24px;padding:30px;position:sticky;top:96px}.surveyintro h3{font-size:25px;line-height:1.2;margin:13px 0}.surveyintro p{font-size:14px;color:#c2d1df}.surveyintro .warning{font-size:12px;border-top:1px solid #ffffff24;margin-top:22px;padding-top:18px;color:#f6d58b}.surveyform{background:white;border:1px solid var(--line);border-radius:24px;padding:30px}.field{padding:17px 0;border-bottom:1px solid var(--line)}.field:last-of-type{border-bottom:0}.field label{display:block;font-weight:800;font-size:14px;margin-bottom:10px}.options{display:flex;flex-wrap:wrap;gap:9px}.options label{border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-weight:600;font-size:13px;cursor:pointer;display:flex;align-items:center;gap:8px;margin:0}.options input{accent-color:#0da99b}.surveyform button{margin-top:20px}.surveyresult{display:none;margin-top:18px;padding:18px;background:#e8faf6;border-radius:14px;color:#075d55}.quizwrap{background:#fff;border:1px solid var(--line);border-radius:25px;overflow:hidden;box-shadow:0 20px 60px #0b24400b}.quiztop{padding:25px 30px;background:linear-gradient(110deg,#0a2544,#0e4357);color:white;display:flex;justify-content:space-between;align-items:center;gap:15px}.quiztop h3{margin:0;font-size:21px}.progress{height:5px;background:#dce5ed}.progress span{height:100%;display:block;width:0;background:var(--teal);transition:.3s}.quizbody{padding:30px}.qmeta{font-size:12px;color:#0b9c90;font-weight:900;letter-spacing:1px;text-transform:uppercase}.question{font-size:24px;line-height:1.3;font-weight:850;color:var(--navy);margin:13px 0 22px}.answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}.answer{padding:15px 17px;border:1px solid var(--line);background:white;border-radius:14px;text-align:left;color:#263a50;font-weight:650;min-height:65px;transition:.2s}.answer:hover{border-color:#0fb6a7;background:#f0fcfa}.answer.correct{border-color:#0d9b75;background:#e6faf2}.answer.wrong{border-color:#d86b6b;background:#fff0f0}.feedback{margin-top:16px;padding:14px 16px;border-radius:13px;background:#f2f6fa;color:#455a70;font-size:14px;display:none}.quizbottom{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:24px}.scorepill{background:#eaf8f6;color:#087b72;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:900}.quizend{text-align:center;padding:30px;display:none}.quizend .scorebig{font-size:54px;font-weight:900;color:#0a9b8e}.quizend h3{font-size:28px;margin:5px}.sources{background:#edf3f8}.sourcegrid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.sourcebox{padding:23px;background:white;border:1px solid var(--line);border-radius:18px}.sourcebox h3{margin:0 0 8px}.sourcebox p,.sourcebox li{font-size:13px;color:var(--muted)}.sourcebox ul{padding-left:18px}.closing{padding:72px 0;background:linear-gradient(120deg,#07182d,#0e4555);color:white;text-align:center;position:relative;overflow:hidden}.closing h2{font-size:clamp(32px,4vw,48px);line-height:1.12;max-width:780px;margin:15px auto}.closing h2 span{color:var(--gold)}.closing p{color:#c5d7e4;max-width:640px;margin:0 auto 25px}.closing .btn{margin:5px}.footer{background:#051222;color:#a9b8c9;padding:22px 0;font-size:12px}.footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}.backtop{position:fixed;bottom:20px;right:20px;border:0;border-radius:50%;width:45px;height:45px;background:var(--teal);color:#062137;font-size:20px;box-shadow:0 8px 24px #0002;display:none;z-index:10}
+@media(max-width:850px){.navlinks{display:none}.hero-grid{grid-template-columns:1fr;padding:55px 0 70px}.hero-art{min-height:340px}.orbit{width:300px;height:300px}.orbit.two{width:240px;height:240px}.hero-svg{max-width:350px}.statgrid{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.virtues{grid-template-columns:repeat(2,1fr)}.chainrow{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.chaincard{min-height:unset}.solutions{grid-template-columns:1fr}.survey{grid-template-columns:1fr}.surveyintro{position:static}.problemgrid{grid-template-columns:1fr}.sourcegrid{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}}
+@media(max-width:520px){section{padding:60px 0}.hero-art{min-height:300px}.float-tag{font-size:10px;padding:9px 11px}.tag-one{right:-3px;top:20px}.tag-two{left:-2px;bottom:20px}.stat{padding:18px}.stat strong{font-size:23px}.virtues{grid-template-columns:1fr 1fr;gap:10px}.virtue{padding:16px 13px}.answers{grid-template-columns:1fr}.quizbody,.surveyform{padding:21px}.quiztop{padding:20px}.question{font-size:21px}.hero h1{font-size:41px}.hero p{font-size:15px}.hero-actions .btn{width:100%}.footerin{display:block}.footerin span{display:block;margin:5px 0}}
+
+/* FUQARO.LAB presentation module */
+.presentation-section{background:linear-gradient(180deg,#07182d 0%,#0b2948 100%);color:#fff;overflow:hidden}
+.presentation-section .sectionhead h2{color:#fff}
+.presentation-section .sectionhead p{color:#c5d7e4}
+.presentation-panel{border:1px solid #ffffff24;border-radius:26px;overflow:hidden;background:#081d34;box-shadow:0 30px 80px #0004}
+.presentation-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;background:#ffffff08;border-bottom:1px solid #ffffff1a;flex-wrap:wrap}
+.presentation-toolbar .pres-label{font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:900;color:#a9eee4}
+.pres-controls{display:flex;gap:8px;flex-wrap:wrap}
+.pres-btn{border:1px solid #ffffff35;border-radius:999px;padding:9px 14px;color:#fff;background:#ffffff0b;font-weight:800;font-size:13px}
+.pres-btn.primary{background:#19c6b2;color:#062137;border-color:#19c6b2}
+.pres-btn:disabled{opacity:.35;cursor:not-allowed}
+.pres-stage{padding:clamp(18px,4vw,42px);min-height:430px;display:grid;align-items:center;background:radial-gradient(circle at 80% 10%,#1c6c7844,transparent 32%),linear-gradient(140deg,#0a2544,#07182d)}
+.pres-slide{display:none;grid-template-columns:1.08fr .92fr;gap:24px;align-items:center;min-height:340px;animation:presIn .35s ease}
+.pres-slide.active{display:grid}
+@keyframes presIn{from{opacity:.2;transform:translateY(8px)}to{opacity:1;transform:none}}
+.pres-kicker{color:#75e5d8;font-size:11px;letter-spacing:1.8px;font-weight:900;text-transform:uppercase}
+.pres-slide h3{font-size:clamp(27px,4vw,46px);line-height:1.08;letter-spacing:-1.2px;margin:13px 0 16px;color:#fff}
+.pres-slide p{color:#d0deea;font-size:clamp(14px,1.5vw,17px);max-width:590px}
+.pres-slide ul{padding-left:20px;color:#d0deea}
+.pres-slide li{margin:7px 0}
+.pres-visual{min-height:245px;border:1px solid #ffffff20;border-radius:22px;background:linear-gradient(145deg,#ffffff12,#ffffff04);display:grid;place-items:center;position:relative;overflow:hidden;padding:18px}
+.pres-visual svg{width:100%;max-width:340px;height:auto;max-height:300px}
+.pres-stat{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}
+.pres-stat span{border:1px solid #ffffff24;border-radius:999px;padding:7px 11px;font-size:12px;color:#e4f5f5;background:#ffffff08}
+.pres-chain{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;flex-wrap:wrap}
+.pres-chain div{border:1px solid #ffffff35;background:#ffffff0b;border-radius:18px;padding:14px 10px;text-align:center;min-width:86px;flex:1}
+.pres-chain strong{display:block;font-size:14px;color:#fff}.pres-chain small{color:#b7d4df;font-size:11px}.pres-chain b{color:#f7c96b;font-size:22px}
+.pres-progress-wrap{height:5px;background:#ffffff12}.pres-progress{height:100%;width:0;background:linear-gradient(90deg,#19c6b2,#f7c96b);transition:width .25s}
+.pres-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 20px;color:#b7c8d8;font-size:12px;flex-wrap:wrap}
+.pres-dots{display:flex;gap:5px;flex-wrap:wrap}.pres-dots button{width:8px;height:8px;border:0;border-radius:50%;padding:0;background:#ffffff40}.pres-dots button.active{background:#19c6b2;transform:scale(1.25)}
+.pres-fullscreen{position:fixed!important;inset:12px!important;z-index:9999!important;width:auto!important;max-width:none!important;max-height:none!important;overflow:auto!important;background:#061427!important}
+.pres-fullscreen .pres-stage{min-height:calc(100vh - 150px)}
+.pres-fullscreen .pres-slide{min-height:60vh}
+.pres-fullscreen .pres-slide h3{font-size:clamp(32px,5vw,62px)}
+.pres-fullscreen .pres-visual{min-height:350px}
+@media(max-width:760px){.pres-slide,.pres-slide.active{grid-template-columns:1fr}.pres-stage{min-height:0}.pres-slide{min-height:0}.pres-visual{min-height:190px;order:-1}.pres-visual svg{max-height:210px}.pres-slide h3{font-size:30px}.presentation-toolbar{align-items:flex-start}.pres-controls{width:100%}.pres-btn{flex:1}.pres-fullscreen{inset:0!important;border-radius:0!important}.pres-fullscreen .pres-stage{min-height:calc(100vh - 165px)}}
+@media(prefers-reduced-motion:reduce){.pres-slide{animation:none}}
+
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container navin">
+    <a class="brand" href="#top"><span class="brandmark">✦</span><span>FUQARO<span style="color:var(--teal)">.LAB</span></span></a>
+    <nav class="navlinks"><a href="#muammo">Muammo</a><a href="#fazilatlar">Fazilatlar</a><a href="#yechim">Yechimlar</a><a href="#sorov">So‘rovnoma</a><a href="#test">Interaktiv test</a><a href="#loyiha-taqdimoti">Taqdimot</a></nav>
+    <a class="navcta" href="#test">Sinovni boshlash ↗</a>
+  </div>
+</header>
+<main id="top">
+<section class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="eyebrow"><span class="dot"></span> 8-sinf · Tarbiya + Huquq</div>
+   <h1>Kuchli davlat <span>mas’uliyatli</span> fuqarodan boshlanadimi?</h1>
+   <p>Hurmat — shunchaki odob emas. U sinfdagi muhitdan boshlanib, jamiyat ishonchi va davlat mustahkamligigacha yetib boradi.</p>
+   <div class="hero-actions"><a class="btn primary" href="#muammo">Loyihani kashf etish <span>↓</span></a><a class="btn secondary" href="#test">⚡ O‘zingni sinab ko‘r</a></div>
+   <div class="hero-note"><div class="avatars"><span>🤝</span><span>📘</span><span>⚖️</span></div><span>Bir muammo. Uch daraja. Amaliy yechim.</span></div>
+  </div>
+  <div class="hero-art" aria-label="Hamjihatlikni ifodalovchi tasvir">
+   <div class="orbit"></div><div class="orbit two"></div>
+   <div class="float-tag tag-one">⚖️ Huquq + burch<small>Muvozanatni saqlash</small></div>
+   <div class="float-tag tag-two">🤝 Hurmatdan boshlanadi<small>Har kuni, har birimizdan</small></div>
+   <svg class="hero-svg" viewBox="0 0 480 430" role="img" aria-label="Bir-birini qo‘llab-quvvatlayotgan yoshlar va kitob tasviri">
+    <defs><linearGradient id="book" x1="0" x2="1"><stop stop-color="#f7c96b"/><stop offset="1" stop-color="#f3a84f"/></linearGradient><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2c8e91"/><stop offset="1" stop-color="#102e51"/></linearGradient></defs>
+    <circle cx="240" cy="210" r="155" fill="url(#bg)" opacity=".65"/>
+    <circle cx="240" cy="210" r="125" fill="#0b2948" stroke="#7ce9dc" stroke-opacity=".25" stroke-width="2"/>
+    <path d="M90 340 Q240 285 390 340 L410 380 Q240 420 70 380Z" fill="#07182d" opacity=".55"/>
+    <path d="M155 245 Q240 210 325 245 L318 318 Q240 345 162 318Z" fill="#eaf4f8"/>
+    <path d="M240 248 Q195 220 155 245 L162 318 Q203 292 240 321Z" fill="url(#book)" stroke="#ffe6a7" stroke-width="3"/>
+    <path d="M240 248 Q285 220 325 245 L318 318 Q277 292 240 321Z" fill="#fff2cf" stroke="#ffe6a7" stroke-width="3"/>
+    <path d="M240 249 L240 320" stroke="#a96c35" stroke-width="3"/>
+    <path d="M177 260 L215 271 M177 275 L215 286 M265 267 L303 258 M265 283 L303 274" stroke="#b37a43" stroke-width="3" stroke-linecap="round" opacity=".65"/>
+    <g transform="translate(115 60)"><circle cx="42" cy="42" r="29" fill="#9a5b3d"/><path d="M13 40 Q14 4 47 10 Q69 14 71 39 L61 29 L22 31Z" fill="#172a3e"/><path d="M12 84 Q42 65 72 84 L86 169 L0 169Z" fill="#19c6b2"/><path d="M22 91 L45 125 L61 91" fill="#fff"/><path d="M25 126 L3 162 M61 126 L86 162" stroke="#9a5b3d" stroke-width="14" stroke-linecap="round"/></g>
+    <g transform="translate(265 48)"><circle cx="42" cy="42" r="29" fill="#c98c68"/><path d="M12 40 Q14 8 43 9 Q69 10 72 36 L60 29 L25 27Z" fill="#2b1f21"/><path d="M12 84 Q42 65 72 84 L87 169 L0 169Z" fill="#e7eff9"/><path d="M30 84 L42 111 L55 84" fill="#0e5264"/><path d="M20 125 L-4 158 M63 125 L84 155" stroke="#c98c68" stroke-width="14" stroke-linecap="round"/></g>
+    <g transform="translate(185 125)"><circle cx="42" cy="42" r="29" fill="#e0ad84"/><path d="M13 37 Q12 7 42 9 Q70 10 72 37 L61 27 L25 26Z" fill="#392d28"/><path d="M11 84 Q42 64 73 84 L85 162 L0 162Z" fill="#f7c96b"/><path d="M22 120 L1 148 M63 120 L85 148" stroke="#e0ad84" stroke-width="14" stroke-linecap="round"/></g>
+    <path d="M150 208 Q188 224 203 252 M332 205 Q298 222 279 252" fill="none" stroke="#e0ad84" stroke-width="12" stroke-linecap="round"/>
+    <path d="M217 177 L228 190 L251 163" fill="none" stroke="#b8fff3" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="355" cy="95" r="17" fill="#f7c96b"/><path d="M355 84 L358 92 L367 94 L360 100 L361 109 L355 104 L347 109 L349 100 L342 94 L351 92Z" fill="#fff2cf"/>
+   </svg>
+  </div>
+ </div>
+</section>
+<div class="container stats"><div class="statgrid">
+ <div class="stat"><strong>5</strong><span>Mas’uliyatli fuqaro fazilati</span></div>
+ <div class="stat"><strong>3</strong><span>Muammo yechimi yo‘nalishi</span></div>
+ <div class="stat"><strong>7</strong><span>Vaziyatli interaktiv savol</span></div>
+ <div class="stat"><strong>1</strong><span>Umumiy maqsad — hurmat</span></div>
+</div></div>
+
+<section id="muammo"><div class="container">
+ <div class="sectionhead reveal"><div class="kicker">01 / Muammoni anglash</div><h2>Muammo ko‘pincha oddiy gapdan boshlanadi.</h2><p>Huquq va burchlarni bilishning o‘zi yetarli emas — bilim kundalik xulq-atvorga aylanishi kerak.</p></div>
+ <div class="problemgrid">
+  <article class="problemcard reveal"><div class="iconbubble">🗣️</div><h3>Biz ko‘rgan muammo</h3><p>O‘quvchilar bir-birining fikrini bo‘lishi, masxara qilishi yoki kelishmovchilikni hurmatsiz so‘zlar bilan hal qilishga urinishi mumkin.</p><div class="chips"><span class="chip">Tinglamaslik</span><span class="chip">Masxara</span><span class="chip">Kelishmovchilik</span></div></article>
+  <article class="problemcard dark reveal"><div class="iconbubble">💡</div><div class="quote">“Kuchli jamoa — bir-birini <em>eshita oladigan</em> jamoa.”</div><p>Bizning pozitsiyamiz: hurmatni faqat talab qilish emas, uni kundalik harakatlar bilan ko‘rsatish kerak.</p><div class="chips"><span class="chip">Dalilga tayanish</span><span class="chip">Amaliy yechim</span><span class="chip">Fuqarolik mas’uliyati</span></div></article>
+ </div>
+</div></section>
+
+<section id="fazilatlar" style="background:#edf3f8"><div class="container">
+ <div class="sectionhead reveal"><div class="kicker">02 / Fuqaro modeli</div><h2>Mas’uliyatli fuqaro qanday bo‘ladi?</h2><p>Bu fazilatlar shior bo‘lib qolmasligi kerak. Har biri sinfda, uyda va mahallada ko‘rinadigan amaliy odatdir.</p></div>
+ <div class="virtues">
+  <article class="virtue reveal"><div class="num">01 / MAS’ULIYAT</div><div class="emoji">🧭</div><h3>Va’daga sodiqlik</h3><p>O‘z vazifasini bajarish va xatosini tan olish.</p></article>
+  <article class="virtue reveal"><div class="num">02 / QAT’IYAT</div><div class="emoji">🛡️</div><h3>To‘g‘ri qaror</h3><p>Qiyin vaziyatda ham odob va qonun doirasida qolish.</p></article>
+  <article class="virtue reveal"><div class="num">03 / DAXLDORLIK</div><div class="emoji">🇺🇿</div><h3>Vatanga foyda</h3><p>Jamoat mulkini asrash va foydali ishda qatnashish.</p></article>
+  <article class="virtue reveal"><div class="num">04 / HURMAT</div><div class="emoji">🤝</div><h3>Hamjihatlik</h3><p>Turli fikr va millat vakillariga hurmat bilan munosabatda bo‘lish.</p></article>
+  <article class="virtue reveal"><div class="num">05 / FAOLLIK</div><div class="emoji">🌱</div><h3>Tashabbuskorlik</h3><p>Muammoni ko‘rsa, xavfsiz va foydali yechim taklif qilish.</p></article>
+ </div>
+</div></section>
+
+<section class="chain" id="boglanish"><div class="container">
+ <div class="sectionhead reveal"><div class="kicker" style="color:var(--gold)">03 / Asosiy g‘oya</div><h2>Shaxs → Jamiyat → Davlat</h2><p>Bir kishining odati boshqalarga ta’sir qiladi. Ko‘plab mas’uliyatli xatti-harakatlar esa ishonchli jamiyatni mustahkamlaydi.</p></div>
+ <div class="chainrow">
+  <article class="chaincard reveal"><div class="big">🧑‍🎓</div><h3>Shaxs</h3><p>O‘quvchi tinglaydi, hurmat bilan gapiradi, o‘z xatti-harakati uchun javob beradi.</p></article>
+  <div class="arrow">➜</div>
+  <article class="chaincard reveal"><div class="big">🏫</div><h3>Jamiyat</h3><p>Sinfda ishonch, hamkorlik va xavfsiz muhit shakllanadi; kelishmovchilik tinch hal qilinadi.</p></article>
+  <div class="arrow">➜</div>
+  <article class="chaincard reveal"><div class="big">🏛️</div><h3>Davlat</h3><p>Mas’uliyatli fuqarolar qonunlarga rioya etish, jamoat tartibi va umumiy manfaatni qo‘llab-quvvatlaydi.</p></article>
+ </div>
+ <div class="chainfoot">Huquq — imkoniyatlarni himoya qiladi. Burch va mas’uliyat esa huquqlardan boshqalar huquqini hurmat qilgan holda foydalanishga yordam beradi.</div>
+</div></section>
+
+<section id="yechim"><div class="container">
+ <div class="sectionhead reveal"><div class="kicker">04 / Taklif qilayotgan yechim</div><h2>Katta o‘zgarish — kichik, muntazam qadamlar.</h2><p>Takliflar maktab hayotida amalga oshirish mumkin bo‘lgan, o‘quvchini ayblashdan ko‘ra xulqni yaxshilashga qaratilgan usullardir.</p></div>
+ <div class="solutions">
+  <article class="solution reveal"><div class="solutiontop"><svg viewBox="0 0 180 150" aria-label="Muloqot tasviri"><rect x="23" y="20" width="134" height="94" rx="15" fill="#fff" stroke="#b9d7e6" stroke-width="2"/><path d="M48 46 H127 M48 62 H111 M48 78 H120" stroke="#9cb4c7" stroke-width="5" stroke-linecap="round"/><circle cx="46" cy="121" r="18" fill="#19c6b2"/><circle cx="133" cy="121" r="18" fill="#f7c96b"/><path d="M64 122 Q89 101 115 122" fill="none" stroke="#526f87" stroke-width="6" stroke-linecap="round"/><path d="M40 121 L45 126 L53 116" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg></div><div class="solutionbody"><div class="label">01 · Har kuni</div><h3>“Avval tingla” qoidasi</h3><p>Fikrlar to‘qnashganda suhbatni xavfsiz va odobli saqlashga yordam beradi.</p><ul><li>Gapni bo‘lmasdan tinglash</li><li>Shaxsni emas, fikrni muhokama qilish</li><li>“Menimcha…” deb muloyim fikr bildirish</li></ul></div></article>
+  <article class="solution reveal"><div class="solutiontop"><svg viewBox="0 0 180 150" aria-label="Jamoaviy kelishuv tasviri"><rect x="33" y="18" width="114" height="116" rx="12" fill="#fff" stroke="#d9c995" stroke-width="2"/><path d="M55 44 H124 M55 66 H124 M55 88 H103" stroke="#d4dce4" stroke-width="5" stroke-linecap="round"/><circle cx="126" cy="100" r="27" fill="#19c6b2"/><path d="M113 100 L123 110 L141 89" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M70 18 V8 H110 V18" fill="none" stroke="#a47b31" stroke-width="6" stroke-linecap="round"/></svg></div><div class="solutionbody"><div class="label">02 · Har hafta</div><h3>Sinfning hurmat kelishuvi</h3><p>O‘quvchilar bilan birga tuzilgan, hamma tushunadigan va bajarishi mumkin bo‘lgan qoidalar.</p><ul><li>Masxara va kamsitishga yo‘l qo‘ymaslik</li><li>Muammoni sinf rahbari bilan muhokama qilish</li><li>Qoidalarni birgalikda qayta ko‘rib chiqish</li></ul></div></article>
+  <article class="solution reveal"><div class="solutiontop"><svg viewBox="0 0 180 150" aria-label="Yordam va hamkorlik tasviri"><circle cx="90" cy="75" r="55" fill="#fff" stroke="#b7d8d7" stroke-width="2"/><circle cx="64" cy="58" r="16" fill="#c98c68"/><path d="M43 100 Q44 73 64 73 Q84 73 85 100" fill="#19c6b2"/><circle cx="115" cy="58" r="16" fill="#e0ad84"/><path d="M94 100 Q95 73 115 73 Q135 73 136 100" fill="#3e6389"/><path d="M74 90 L87 103 L108 81" fill="none" stroke="#f7c96b" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div class="solutionbody"><div class="label">03 · Davomiy</div><h3>“Bir-birimizga tayanch”</h3><p>Yangi, tortinchoq yoki yordamga muhtoj o‘quvchini jamoaga qo‘shishga e’tibor berish.</p><ul><li>Yolg‘iz qolgan o‘quvchini suhbatga taklif qilish</li><li>O‘qishda tengdosh yordami</li><li>Yaxshi xatti-harakatni e’tirof etish</li></ul></div></article>
+ </div>
+</div></section>
+
+<section id="sorov" style="background:#edf3f8"><div class="container">
+ <div class="sectionhead reveal"><div class="kicker">05 / Dalil to‘plash</div><h2>So‘rovnoma: sinfimizda hurmat muhiti qanday?</h2><p>Quyidagi mini-so‘rovnoma namunasi. Haqiqiy natijalarni faqat sinfdoshlaringizdan anonim javoblar yig‘gandan keyin kiriting.</p></div>
+ <div class="survey">
+  <aside class="surveyintro reveal"><div class="eyebrow"><span class="dot"></span> Anonim va ixtiyoriy</div><h3>Fikrni eshitish — yechimning birinchi qadami.</h3><p>Ism, telefon yoki boshqa shaxsiy ma’lumotlarni so‘ramang. Natijalarni odamlarni ayblash uchun emas, umumiy muammoni tushunish uchun ishlating.</p><div class="warning">⚠️ Bu sahifadagi javoblar tadqiqot natijasi sifatida saqlanmaydi. Bu — loyiha uchun namuna.</div></aside>
+  <form class="surveyform reveal" id="surveyForm">
+   <div class="field"><label>1. Sinfda fikringizni erkin ayta olasizmi?</label><div class="options"><label><input type="radio" name="s1" value="Ha" required> Ha</label><label><input type="radio" name="s1" value="Ba’zan"> Ba’zan</label><label><input type="radio" name="s1" value="Yo‘q"> Yo‘q</label></div></div>
+   <div class="field"><label>2. Kelishmovchilikda o‘quvchilar bir-birini tinglaydimi?</label><div class="options"><label><input type="radio" name="s2" value="Ko‘pincha" required> Ko‘pincha</label><label><input type="radio" name="s2" value="Ba’zan"> Ba’zan</label><label><input type="radio" name="s2" value="Kamdan-kam"> Kamdan-kam</label></div></div>
+   <div class="field"><label>3. Hurmat muhitini yaxshilash uchun nima foydaliroq?</label><div class="options"><label><input type="radio" name="s3" value="Kelishuv" required> Sinf kelishuvi</label><label><input type="radio" name="s3" value="Muloqot"> Muloqot mashqi</label><label><input type="radio" name="s3" value="Tengdosh yordami"> Tengdosh yordami</label></div></div>
+   <button class="btn primary" type="submit">Javoblarimni ko‘rish ↗</button>
+   <div class="surveyresult" id="surveyResult" role="status"></div>
+  </form>
+ </div>
+</div></section>
+
+<section id="test"><div class="container">
+ <div class="sectionhead reveal"><div class="kicker">06 / Interaktiv raqamli mahsulot</div><h2>Vaziyatni tanla. Mas’uliyatli qaror qil.</h2><p>Har bir savolda kundalik hayotga yaqin vaziyat beriladi. Javobdan keyin nima uchun shu tanlov to‘g‘ri yoki noto‘g‘ri ekanini bilib olasiz.</p></div>
+ <div class="quizwrap reveal">
+  <div class="quiztop"><h3>⚡ Fuqarolik qarorlari laboratoriyasi</h3><span class="scorepill" id="scorePill">Ball: 0 / 7</span></div>
+  <div class="progress"><span id="progressBar"></span></div>
+  <div class="quizbody" id="quizBody"><div class="qmeta" id="qMeta">1-savol · 7 tadan</div><div class="question" id="question"></div><div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="quizbottom"><span style="font-size:12px;color:var(--muted)" id="hint">Eng yaxshi javobni tanlang.</span><button class="btn primary" id="nextBtn" style="display:none">Keyingi savol →</button></div></div>
+  <div class="quizend" id="quizEnd"><div class="scorebig" id="finalScore">0/7</div><h3 id="finalTitle">Ajoyib urinish!</h3><p id="finalText" style="color:var(--muted);max-width:530px;margin:8px auto 22px"></p><button class="btn primary" id="restartBtn">↻ Qayta topshirish</button></div>
+ </div>
+</div></section>
+
+
+<section id="loyiha-taqdimoti" class="presentation-section">
+ <div class="container">
+  <div class="sectionhead reveal">
+   <div class="kicker" style="color:var(--gold)">08 / LOYIHA TAQDIMOTI</div>
+   <h2>G‘oyadan — mas’uliyatli harakatga.</h2>
+   <p>8-sinf · Tarbiya va Davlat va huquq asoslari. Slaydlarni sayt ichida ko‘ring yoki PPTX faylini yuklab oling.</p>
+  </div>
+  <div class="presentation-panel" id="presentationPanel">
+   <div class="presentation-toolbar">
+    <span class="pres-label">✦ FUQARO.LAB · LOYIHA TAQDIMOTI</span>
+    <div class="pres-controls">
+     <button type="button" class="pres-btn primary" id="startPresentation">▶ Taqdimotni ko‘rish</button>
+     <button type="button" class="pres-btn" id="downloadPresentation">↓ Taqdimotni yuklab olish (PPTX)</button>
+    </div>
+   </div>
+   <div class="pres-progress-wrap"><div class="pres-progress" id="presProgress"></div></div>
+   <div class="pres-stage" id="presStage" aria-live="polite">
+    <article class="pres-slide active" data-slide="0">
+     <div><div class="pres-kicker">8-sinf · Loyiha taqdimoti</div><h3>Kuchli davlat mas’uliyatli fuqarodan boshlanadimi?</h3><p>Hurmat, huquq va burch — mustahkam jamiyatning kundalik poydevori.</p><div class="pres-stat"><span>Tarbiya</span><span>Davlat va huquq asoslari</span><span>FUQARO.LAB</span></div></div>
+     <div class="pres-visual"><svg viewBox="0 0 320 260" role="img" aria-label="Birgalikda kitob tutgan o‘quvchilar"><circle cx="160" cy="125" r="105" fill="#19c6b2" opacity=".13"/><circle cx="160" cy="125" r="80" fill="#fff" opacity=".05"/><path d="M72 203 Q160 170 248 203 L260 230 Q160 252 60 230Z" fill="#061427"/><path d="M100 153 Q130 135 160 153 Q190 135 220 153 L216 205 Q187 191 160 209 Q133 191 104 205Z" fill="#f7c96b"/><path d="M160 154 V207" stroke="#986b32" stroke-width="3"/><g><circle cx="95" cy="72" r="22" fill="#b97d5c"/><path d="M73 70 Q74 42 97 45 Q119 46 118 70 L105 59 L82 59Z" fill="#172a3e"/><path d="M64 139 Q66 98 95 98 Q124 98 126 139 L119 170 H70Z" fill="#19c6b2"/></g><g><circle cx="225" cy="72" r="22" fill="#d8a47d"/><path d="M203 70 Q205 43 226 45 Q247 47 248 70 L235 58 L212 59Z" fill="#2b1f21"/><path d="M194 139 Q196 98 225 98 Q254 98 256 139 L250 170 H200Z" fill="#e8f0f8"/></g><circle cx="160" cy="58" r="17" fill="#f7c96b"/><path d="M151 58 L158 65 L170 50" fill="none" stroke="#0b2948" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </article>
+    <article class="pres-slide" data-slide="1">
+     <div><div class="pres-kicker">01 / Muammoni anglash</div><h3>Muammo oddiy gapdan boshlanishi mumkin.</h3><p>O‘quvchilar fikrni bo‘lishi, masxara qilishi yoki kelishmovchilikni hurmatsiz so‘zlar bilan hal qilishga urinishi mumkin.</p><ul><li>Tinglamaslik</li><li>Masxara va kamsitish</li><li>Kelishmovchilikni tinch hal qila olmaslik</li></ul></div>
+     <div class="pres-visual"><svg viewBox="0 0 320 250" role="img" aria-label="Muloqot va tinglash ramzi"><rect x="28" y="35" width="145" height="96" rx="18" fill="#fff" opacity=".95"/><path d="M55 65 H145 M55 85 H126 M55 105 H137" stroke="#8aa2b7" stroke-width="7" stroke-linecap="round"/><path d="M173 84 L197 103 L197 84" fill="#fff"/><rect x="147" y="115" width="145" height="86" rx="18" fill="#19c6b2"/><path d="M174 145 H263 M174 165 H245" stroke="#073148" stroke-width="7" stroke-linecap="round"/><circle cx="70" cy="180" r="22" fill="#f7c96b"/><path d="M60 180 L68 188 L82 170" fill="none" stroke="#0b2948" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </article>
+    <article class="pres-slide" data-slide="2">
+     <div><div class="pres-kicker">02 / Fuqaro modeli</div><h3>Mas’uliyatli fuqaro qanday bo‘ladi?</h3><p>Fazilatlar shior bo‘lib qolmasligi kerak. Ular sinfda, uyda va mahallada amaliy odatga aylanishi lozim.</p><ul><li>Mas’uliyat — vazifani bajarish, xatoni tan olish</li><li>Qat’iyat — odob va qonun doirasida qolish</li><li>Daxldorlik — jamoat mulkini asrash</li><li>Hurmat va faollik — hamjihatlik, tashabbus</li></ul></div>
+     <div class="pres-visual"><svg viewBox="0 0 320 260" role="img" aria-label="Besh fuqarolik fazilati"><circle cx="160" cy="130" r="53" fill="#19c6b2" opacity=".22"/><circle cx="160" cy="130" r="37" fill="#19c6b2"/><path d="M144 131 L155 142 L177 116" fill="none" stroke="#062137" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><g fill="#f7c96b"><circle cx="160" cy="40" r="23"/><circle cx="245" cy="101" r="23"/><circle cx="213" cy="205" r="23"/></g><g fill="#7adfd4"><circle cx="107" cy="205" r="23"/><circle cx="75" cy="101" r="23"/></g><g stroke="#d0e9ec" stroke-width="2" stroke-dasharray="5 5" fill="none"><path d="M160 63 V90 M224 111 L195 123 M199 190 L181 160 M121 190 L140 159 M96 111 L126 123"/></g><g fill="#08223c" font-size="15" font-weight="bold" text-anchor="middle"><text x="160" y="46">✓</text><text x="245" y="107">⚖</text><text x="213" y="211">★</text><text x="107" y="211">🤝</text><text x="75" y="107">!</text></g></svg></div>
+    </article>
+    <article class="pres-slide" data-slide="3">
+     <div><div class="pres-kicker">03 / Asosiy g‘oya</div><h3>Shaxs → Jamiyat → Davlat</h3><p>Bir kishining odati boshqalarga ta’sir qiladi. Ko‘plab mas’uliyatli xatti-harakatlar ishonchli jamiyatni mustahkamlaydi.</p><div class="pres-stat"><span>Huquq</span><span>Burch</span><span>Umumiy manfaat</span></div></div>
+     <div class="pres-visual"><div class="pres-chain"><div><b>🧑‍🎓</b><strong>Shaxs</strong><small>Hurmat va mas’uliyat</small></div><b>→</b><div><b>🏫</b><strong>Jamiyat</strong><small>Ishonch va hamkorlik</small></div><b>→</b><div><b>🏛️</b><strong>Davlat</strong><small>Qonun va tartib</small></div></div></div>
+    </article>
+    <article class="pres-slide" data-slide="4">
+     <div><div class="pres-kicker">04 / Amaliy yechimlar</div><h3>Katta o‘zgarish — kichik, muntazam qadamlar.</h3><ul><li><b>“Avval tingla”:</b> gapni bo‘lmaslik, fikrni muloyim bildirish.</li><li><b>Sinfning hurmat kelishuvi:</b> qoidalarni birgalikda tuzish va qayta ko‘rib chiqish.</li><li><b>“Bir-birimizga tayanch”:</b> yangi yoki yordamga muhtoj o‘quvchini jamoaga qo‘shish.</li></ul></div>
+     <div class="pres-visual"><svg viewBox="0 0 320 260" role="img" aria-label="Birgalikda yechim topayotgan o‘quvchilar"><rect x="68" y="28" width="184" height="198" rx="20" fill="#fff" opacity=".96"/><path d="M98 67 H222 M98 91 H205 M98 115 H214" stroke="#c3d1dd" stroke-width="8" stroke-linecap="round"/><circle cx="160" cy="170" r="37" fill="#19c6b2"/><path d="M140 170 L155 185 L182 154" fill="none" stroke="#062137" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="64" cy="175" r="25" fill="#f7c96b"/><circle cx="256" cy="175" r="25" fill="#7adfd4"/><path d="M83 175 H121 M199 175 H237" stroke="#e3f3f3" stroke-width="6" stroke-linecap="round"/></svg></div>
+    </article>
+    <article class="pres-slide" data-slide="5">
+     <div><div class="pres-kicker">05 / Dalil va halollik</div><h3>Fikr dalil bilan kuchli.</h3><p>Loyihada anonim so‘rovnoma va jamoaviy muhokama yordamida sinfdagi hurmat muhiti o‘rganilishi mumkin.</p><ul><li>Ism va shaxsiy ma’lumotlarni so‘ramaslik</li><li>Haqiqiy javoblarni yig‘ib, umumiy natijalarni hisoblash</li><li>Konstitutsiya va darsliklardagi ma’lumotlarni tekshirish</li><li>AI yordamida tayyorlangan materialni jamoa tekshirishi</li></ul></div>
+     <div class="pres-visual"><svg viewBox="0 0 320 260" role="img" aria-label="So‘rovnoma va tekshirilgan ma’lumot"><rect x="72" y="20" width="176" height="220" rx="16" fill="#fff" opacity=".96"/><path d="M100 59 H216 M100 91 H216 M100 123 H216 M100 155 H184" stroke="#d2dce5" stroke-width="8" stroke-linecap="round"/><g fill="#19c6b2"><rect x="88" y="49" width="18" height="18" rx="4"/><rect x="88" y="81" width="18" height="18" rx="4"/><rect x="88" y="113" width="18" height="18" rx="4"/></g><path d="M91 57 L96 62 L104 52 M91 89 L96 94 L104 84 M91 121 L96 126 L104 116" fill="none" stroke="#062137" stroke-width="2.5"/><circle cx="213" cy="190" r="28" fill="#f7c96b"/><path d="M199 190 L209 200 L228 178" fill="none" stroke="#062137" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </article>
+    <article class="pres-slide" data-slide="6">
+     <div><div class="pres-kicker">06 / Xulosa</div><h3>Kuchli davlatning poydevori — mas’uliyatli inson.</h3><p>Hurmatni boshqalardan kutishdan oldin, uni o‘zimiz ko‘rsataylik. Bugun sinfda boshlangan kichik odat ertangi jamiyat madaniyatiga hissa qo‘shadi.</p><div class="pres-stat"><span>Hurmat</span><span>Mas’uliyat</span><span>Qonunga rioya</span></div></div>
+     <div class="pres-visual"><svg viewBox="0 0 320 260" role="img" aria-label="Jamiyat birligi va kelajak ramzi"><circle cx="160" cy="125" r="94" fill="#19c6b2" opacity=".13"/><path d="M72 194 L160 70 L248 194Z" fill="#f7c96b" opacity=".9"/><path d="M105 194 L160 111 L215 194Z" fill="#0b2948"/><path d="M128 194 V158 Q160 133 192 158 V194Z" fill="#19c6b2"/><path d="M60 210 H260" stroke="#c6e8e8" stroke-width="5" stroke-linecap="round"/><circle cx="160" cy="47" r="18" fill="#f7c96b"/><path d="M151 47 L158 54 L170 39" fill="none" stroke="#08223c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    </article>
+   </div>
+   <div class="pres-bottom"><span id="presCounter">1 / 7</span><div class="pres-dots" id="presDots" aria-label="Slayd tanlash"></div><div class="pres-controls"><button type="button" class="pres-btn" id="prevSlide" disabled>← Oldingi</button><button type="button" class="pres-btn primary" id="nextSlide">Keyingi →</button><button type="button" class="pres-btn" id="fullscreenPresentation">⛶ To‘liq ekran</button></div></div>
+  </div>
+  <p style="font-size:12px;color:#b7c8d8;margin:14px 4px 0">Boshqaruv: ← / → strelkalar. PPTX fayli saytning ushbu loyihasidagi mazmun asosida yaratildi.</p>
+ </div>
+</section>
+
+<section class="sources"><div class="container">
+ <div class="sectionhead reveal"><div class="kicker">07 / Huquqiy asos va halollik</div><h2>Fikr dalil bilan kuchli.</h2><p>Loyiha maktab muhitidagi hurmat, huquq, burch va fuqarolik mas’uliyati o‘rtasidagi bog‘lanishni tahlil qiladi.</p></div>
+ <div class="sourcegrid">
+  <article class="sourcebox reveal"><h3>📚 Foydalanish uchun manbalar</h3><ul><li>O‘zbekiston Respublikasi Konstitutsiyasi — huquq va burchlar bo‘yicha tegishli normalarni tekshirish.</li><li>8-sinf “Tarbiya” hamda “Davlat va huquq asoslari” darsliklari.</li><li>Loyiha doirasida o‘tkazilgan anonim so‘rovnoma va jamoaviy muhokama — natijalar haqiqiy ma’lumotlar bilan to‘ldiriladi.</li></ul><p>Huquqiy modda yoki raqam keltirishdan oldin uni rasmiy manbadan tekshiring.</p></article>
+  <article class="sourcebox reveal"><h3>🧠 Sun’iy intellektdan foydalanish</h3><p>Ushbu sayt maketini tuzishda sun’iy intellekt yordamidan foydalanilgan. Savollar, takliflar va xulosalar jamoa tomonidan darslik, Konstitutsiya va haqiqiy kuzatuvlar bilan tekshirilishi kerak.</p><p>So‘rovnoma natijalari bu saytga oldindan kiritilmagan. Shaxsiy ma’lumotlarni kiritmang va respondentlarni nomma-nom ko‘rsatmang.</p></article>
+ </div>
+</div></section>
+<section class="closing"><div class="container reveal"><div class="eyebrow"><span class="dot"></span> Bizning xulosamiz</div><h2>Kuchli davlatning poydevori — <span>mas’uliyatli inson.</span></h2><p>Hurmatni boshqalardan kutishdan oldin, uni o‘zimiz ko‘rsataylik. Bugun sinfda boshlangan kichik odat ertangi jamiyat madaniyatiga hissa qo‘shadi.</p><a class="btn primary" href="#test">Bilimingni tekshir ↗</a><button class="btn secondary" onclick="window.print()">⎙ Sahifani chop etish</button></div></section>
+</main>
+<footer class="footer"><div class="container footerin"><span>© 2026 · FUQARO.LAB — o‘quv loyihasi</span><span>8-sinf · Tarbiya va Davlat va huquq asoslari</span><span>Jamoa a’zolari: <b>[ismlarni kiriting]</b></span></div></footer>
+<button class="backtop" id="backtop" aria-label="Yuqoriga qaytish" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+const questions=[
+ {q:"Sinfdoshingiz javob berayotganda boshqalar kulib yubordi. Eng mas’uliyatli harakat qaysi?",a:["Ularga qo‘shilib kulish","Sinfdo‘stni hurmat bilan tinglashga chaqirish","Hech kimga aytmasdan videoga olish","Darhol janjal boshlash"],c:1,e:"Hurmatli munosabat sinfdoshning qadr-qimmatini saqlaydi. Vaziyatni tinch va odobli tarzda to‘g‘rilash — mas’uliyatli tanlov."},
+ {q:"Siz bilan sinfdoshingizning fikri mos kelmadi. Nima qilasiz?",a:["Uning fikrini masxara qilaman","Uni gapirtirmayman","Avval tinglab, dalil bilan fikrimni aytaman","Boshqalarga uni yomonlayman"],c:2,e:"Muloqot madaniyati boshqa fikrni tinglash, shaxsni emas, g‘oyani muhokama qilishni talab etadi."},
+ {q:"Sinfda yangi o‘quvchi yolg‘iz o‘tiribdi. Qanday yo‘l tutish mumkin?",a:["Uni suhbatga taklif qilish","Uni o‘zi moslashsin deb chetda qolish","U haqda taxminlar tarqatish","Faqat do‘stlaringiz bilan gaplashish"],c:0,e:"Tashabbuskorlik va hamjihatlik — boshqani jamoaga qo‘shish va yordam taklif qilishda ko‘rinadi."},
+ {q:"Maktab mulkiga kimdir ataylab zarar yetkazayotganini ko‘rdingiz. To‘g‘ri yo‘l qaysi?",a:["Buni qiziq deb tomosha qilish","O‘zingiz ham zarar yetkazish","Xavfsiz tarzda mas’ul kattaga xabar berish","Ijtimoiy tarmoqqa shaxsini fosh qilish"],c:2,e:"Jamoat mulkini asrash umumiy mas’uliyatdir. Xavfsiz va tegishli yo‘l bilan xabar berish, sharmanda qilishdan ko‘ra to‘g‘riroq."},
+ {q:"Huquq va burch o‘rtasidagi munosabatni qaysi javob yaxshi ifodalaydi?",a:["Faqat o‘z huquqim muhim","Burchlar faqat kattalarga tegishli","Huquqimdan foydalanganda boshqalarning huquqini ham hurmat qilaman","Qoidalar kerak emas"],c:2,e:"Huquq va burch bir-biriga bog‘liq: o‘z imkoniyatlarimizdan foydalanar ekanmiz, boshqalarning huquq va erkinliklarini ham hurmat qilishimiz kerak."},
+ {q:"Sinf uchun hurmat qoidalarini kim ishlab chiqsa samaraliroq bo‘ladi?",a:["Faqat bitta o‘quvchi","O‘qituvchi va o‘quvchilar birgalikda muhokama qilib","Hech kim — qoidalarsiz","Faqat eng faol o‘quvchilar"],c:1,e:"Birgalikda ishlab chiqilgan kelishuv ko‘proq tushuniladi va unga rioya qilish mas’uliyatini oshiradi."},
+ {q:"“Shaxs → Jamiyat → Davlat” bog‘lanishini qaysi misol ko‘rsatadi?",a:["Bir o‘quvchi odobli bo‘lsa, bu hech kimga ta’sir qilmaydi","Sinfdagi hurmat ishonchni oshiradi, ishonchli jamiyat esa davlat mustahkamligiga hissa qo‘shadi","Davlat faqat binolardan iborat","Fuqarolarning xulqi muhim emas"],c:1,e:"Shaxslarning kundalik xatti-harakati jamiyatdagi ishonch va hamkorlikka ta’sir qiladi. Bu fuqarolik mas’uliyatining muhim jihati."}
+];
+let qi=0,score=0,answered=false;
+const $=id=>document.getElementById(id);
+function renderQ(){answered=false;const q=questions[qi];$("qMeta").textContent=`${qi+1}-savol · ${questions.length} tadan`;$("question").textContent=q.q;$("answers").innerHTML="";$("feedback").style.display="none";$("nextBtn").style.display="none";$("hint").textContent="Eng yaxshi javobni tanlang.";q.a.forEach((t,i)=>{const b=document.createElement("button");b.className="answer";b.textContent=String.fromCharCode(65+i)+". "+t;b.onclick=()=>choose(i,b);$("answers").appendChild(b)});$("progressBar").style.width=(qi/questions.length*100)+"%";$("scorePill").textContent=`Ball: ${score} / ${questions.length}`}
+function choose(i,btn){if(answered)return;answered=true;const q=questions[qi];[...$("answers").children].forEach((b,j)=>{b.disabled=true;if(j===q.c)b.classList.add("correct")});if(i===q.c){score++;btn.classList.add("correct");$("feedback").innerHTML="✅ <b>To‘g‘ri tanlov!</b> "+q.e}else{btn.classList.add("wrong");$("feedback").innerHTML="💡 <b>Yana bir bor o‘ylab ko‘r.</b> "+q.e}$("feedback").style.display="block";$("nextBtn").style.display="inline-flex";$("hint").textContent="Izohni o‘qib, keyingi vaziyatga o‘ting.";$("scorePill").textContent=`Ball: ${score} / ${questions.length}`}
+$("nextBtn").onclick=()=>{qi++;if(qi<questions.length)renderQ();else finish()};
+function finish(){$("quizBody").style.display="none";$("quizEnd").style.display="block";$("progressBar").style.width="100%";$("finalScore").textContent=`${score}/${questions.length}`;$("finalTitle").textContent=score===7?"A’lo! Mas’uliyatli qarorlar!":score>=5?"Yaxshi natija!":"Mashq qilishda davom et!";$("finalText").textContent=score===7?"Siz barcha vaziyatlarda hurmat, huquq va mas’uliyatni hisobga oldingiz. Shu odatlarni kundalik hayotda ham qo‘llang.":`Siz ${questions.length} savoldan ${score} tasiga to‘g‘ri javob berdingiz. Izohlarni qayta ko‘rib chiqing: har bir vaziyatda hurmat, xavfsizlik va boshqalarning huquqlarini hisobga oling.`;$("scorePill").textContent=`Yakuniy ball: ${score}/${questions.length}`}
+$("restartBtn").onclick=()=>{qi=0;score=0;$("quizBody").style.display="block";$("quizEnd").style.display="none";renderQ()};
+renderQ();
+$("surveyForm").addEventListener("submit",e=>{e.preventDefault();const data=new FormData(e.target);const count=[...data.values()].length;$("surveyResult").style.display="block";$("surveyResult").innerHTML=`<b>Javoblaringiz tanlandi (${count}/3).</b><br>Bu demo so‘rovnoma javoblarni serverga yubormaydi va saqlamaydi. Loyiha dalili sifatida ishlatish uchun sinfdoshlaringizdan anonim tarzda haqiqiy javoblarni yig‘ib, umumiy son va foizlarni alohida hisoblang.`});
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+const topBtn=$("backtop");window.addEventListener("scroll",()=>{topBtn.style.display=window.scrollY>600?"block":"none"});
+
+// In-site slide deck controls
+(function(){
+ const panel=document.getElementById('presentationPanel');
+ if(!panel)return;
+ const slides=[...panel.querySelectorAll('.pres-slide')];
+ const prev=document.getElementById('prevSlide'),next=document.getElementById('nextSlide');
+ const counter=document.getElementById('presCounter'),progress=document.getElementById('presProgress');
+ const dots=document.getElementById('presDots'),start=document.getElementById('startPresentation');
+ let index=0;
+ slides.forEach((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',(i+1)+'-slayd');b.addEventListener('click',()=>show(i));dots.appendChild(b)});
+ function show(i){index=Math.max(0,Math.min(slides.length-1,i));slides.forEach((s,j)=>s.classList.toggle('active',j===index));[...dots.children].forEach((d,j)=>{d.classList.toggle('active',j===index);d.setAttribute('aria-current',j===index?'true':'false')});counter.textContent=(index+1)+' / '+slides.length;progress.style.width=((index+1)/slides.length*100)+'%';prev.disabled=index===0;next.textContent=index===slides.length-1?'Yakuniy slayd ✓':'Keyingi →';}
+ prev.addEventListener('click',()=>show(index-1));next.addEventListener('click',()=>show(index===slides.length-1?0:index+1));
+ start.addEventListener('click',()=>{show(0);document.getElementById('loyiha-taqdimoti').scrollIntoView({behavior:'smooth',block:'start'});});
+ document.getElementById('fullscreenPresentation').addEventListener('click',async()=>{try{if(!document.fullscreenElement){await panel.requestFullscreen();panel.classList.add('pres-fullscreen')}else{await document.exitFullscreen();panel.classList.remove('pres-fullscreen')}}catch(e){panel.classList.toggle('pres-fullscreen')}});
+ document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement)panel.classList.remove('pres-fullscreen')});
+ document.addEventListener('keydown',e=>{if(!document.getElementById('loyiha-taqdimoti').getBoundingClientRect().height)return;const tag=(document.activeElement&&document.activeElement.tagName||'').toLowerCase();if(['input','textarea','select'].includes(tag))return;if(e.key==='ArrowRight'){show(index+1)}else if(e.key==='ArrowLeft'){show(index-1)}else if(e.key==='Escape'){panel.classList.remove('pres-fullscreen')}});
+ document.getElementById('downloadPresentation').addEventListener('click',()=>{window.location.href='FUQARO.LAB_Loyiha_Taqdimoti.pptx'});
+ show(0);
+})();
+
+</script>
+</body>
+</html>
